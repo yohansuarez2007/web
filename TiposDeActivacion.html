@@ -1,0 +1,27 @@
+<!-- Sección "¿Qué es?" oculta por defecto -->
+<section id="queEsSeccion" class="container my-5 d-none">
+    <h2>Tipos de activación</h2>
+    <p>Activación física:
+Consiste en calentar el material carbonoso a altas temperaturas en ausencia de oxígeno (carbonización) y luego exponerlo a gases como vapor de agua o dióxido de carbono (activación) para desarrollar su porosidad. Es un proceso que no usa químicos, pero requiere altas temperaturas y mayor consumo energético.</p>
+
+    <!-- Botón para volver al inicio -->
+    <div class="text-center my-4">
+        <button class="btn btn-primary" onclick="volverInicio()">← Volver al menú principal</button>
+    </div>
+</section>
+
+<!-- Script para mostrar/ocultar sección -->
+<script>
+    // Muestra la sección ¿Qué es?
+    document.querySelector('a[href="#que-es"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById('queEsSeccion').classList.remove('d-none');
+        window.scrollTo({ top: document.getElementById('queEsSeccion').offsetTop - 60, behavior: 'smooth' });
+    });
+
+    // Función para volver al inicio (ocultar la sección)
+    function volverInicio() {
+        document.getElementById('queEsSeccion').classList.add('d-none');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>

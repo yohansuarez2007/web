@@ -1,0 +1,26 @@
+<!-- Sección "¿Qué es?" oculta por defecto -->
+<section id="queEsSeccion" class="container my-5 d-none">
+    <h2>¿Qué es el carbón activado?</h2>
+    <p>El carbón activado es un material poroso con alta capacidad de adsorción, utilizado para purificar agua, aire y otros compuestos. Se puede obtener de materiales orgánicos como la cáscara de plátano mediante un proceso de carbonización y activación.</p>
+
+    <!-- Botón para volver al inicio -->
+    <div class="text-center my-4">
+        <button class="btn btn-primary" onclick="volverInicio()">← Volver al menú principal</button>
+    </div>
+</section>
+
+<!-- Script para mostrar/ocultar sección -->
+<script>
+    // Muestra la sección ¿Qué es?
+    document.querySelector('a[href="#que-es"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById('queEsSeccion').classList.remove('d-none');
+        window.scrollTo({ top: document.getElementById('queEsSeccion').offsetTop - 60, behavior: 'smooth' });
+    });
+
+    // Función para volver al inicio (ocultar la sección)
+    function volverInicio() {
+        document.getElementById('queEsSeccion').classList.add('d-none');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
